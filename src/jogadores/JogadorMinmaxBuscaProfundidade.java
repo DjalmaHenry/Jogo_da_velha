@@ -99,6 +99,21 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
                 return -1;
             }
         }
+
+        // check main diagonal
+        // for (int i = 0; i < tabuleiro.length; i++) {
+
+        // if (tabuleiro[i][i] == tabuleiro[i + 1][i + 1] && tabuleiro[i + 1][i + 1] ==
+        // tabuleiro[i + 2][i + 2]) {
+        // if (tabuleiro[i][i] == 0) {
+        // return +1;
+        // } else if (tabuleiro[i][i] == 1) {
+        // return -1;
+        // }
+        // }
+
+        // }
+
         if (tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]) {
             if (tabuleiro[0][2] == 0) {
                 return +1;
@@ -106,6 +121,20 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
                 return -1;
             }
         }
+
+        // check secondary diagonal
+        // for (int i = 0; i < tabuleiro.length; i++) {
+
+        // if (tabuleiro[i][i + 2] == tabuleiro[i + 1][i + 1] && tabuleiro[i + 1][i + 1]
+        // == tabuleiro[i + 2][i]) {
+        // if (tabuleiro[i][i + 2] == 0) {
+        // return +1;
+        // } else if (tabuleiro[i][i + 2] == 1) {
+        // return -1;
+        // }
+        // }
+
+        // }
         return 0;
     }
 
