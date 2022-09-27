@@ -85,7 +85,7 @@ public class JogadorHeuristico extends Jogador {
         }
     }
 
-    // evaluate function to board 50x50 matrix
+    // evaluate function to board N x N matrix
     public int evaluate(int[][] tabuleiro) {
         // check rows
         for (int i = 0; i < tabuleiro.length; i++) {
