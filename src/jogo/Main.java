@@ -18,13 +18,14 @@ public class Main {
      */
     public static void main(String[] args) {
                 
-        Jogador[] jogadores = new Jogador[3];
-        jogadores[0] = new JogadorLinhaColuna("LinhaColuna");
-        jogadores[1] = new JogadorAleatorio("Aleatório");
+        Jogador[] jogadores = new Jogador[2];
+        // jogadores[0] = new JogadorLinhaColuna("LinhaColuna");
+        jogadores[0] = new JogadorAleatorio("Aleatório");
         // jogadores[2] = new Manual("Eu");
-        jogadores[2] = new JogadorMinmaxBuscaProfundidade("TheBoys");
+        jogadores[1] = new JogadorHeuristico("TheBoys");
+        // jogadores[1] = new JogadorMinmaxBuscaProfundidade("TheBoys");
         
-        Campeonato campeonato = new Campeonato(jogadores, 3);
+        Campeonato campeonato = new Campeonato(jogadores, 50);
         Participacao[] p = campeonato.runPontosCorridos();
         
         for(int i = 0; i < p.length; i++){

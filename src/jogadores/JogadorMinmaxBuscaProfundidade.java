@@ -73,6 +73,7 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
         }
     }
 
+    // evaluate the board
     public int evaluate(int[][] tabuleiro) {
         for (int row = 0; row < 3; row++) {
             if (tabuleiro[row][0] == tabuleiro[row][1] && tabuleiro[row][1] == tabuleiro[row][2]) {
@@ -109,6 +110,7 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
         return 0;
     }
 
+    // check if there are empty spaces
     public boolean isMovesLeft(int[][] tabuleiro) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
