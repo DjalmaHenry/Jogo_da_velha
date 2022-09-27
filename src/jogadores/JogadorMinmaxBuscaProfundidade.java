@@ -75,6 +75,7 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
 
     // evaluate the board
     public int evaluate(int[][] tabuleiro) {
+        // check rows
         for (int row = 0; row < 3; row++) {
             if (tabuleiro[row][0] == tabuleiro[row][1] && tabuleiro[row][1] == tabuleiro[row][2]) {
                 if (tabuleiro[row][0] == 0) {
@@ -84,6 +85,8 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
                 }
             }
         }
+
+        // check columns
         for (int col = 0; col < 3; col++) {
             if (tabuleiro[0][col] == tabuleiro[1][col] && tabuleiro[1][col] == tabuleiro[2][col]) {
                 if (tabuleiro[0][col] == 0) {
@@ -93,6 +96,8 @@ public class JogadorMinmaxBuscaProfundidade extends Jogador {
                 }
             }
         }
+        
+        // check diagonals
         if (tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2]) {
             if (tabuleiro[0][0] == 0) {
                 return +1;

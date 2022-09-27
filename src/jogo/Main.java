@@ -22,10 +22,10 @@ public class Main {
         // jogadores[0] = new JogadorLinhaColuna("LinhaColuna");
         jogadores[0] = new JogadorAleatorio("Aleatório");
         // jogadores[2] = new Manual("Eu");
-        jogadores[1] = new JogadorHeuristico("TheBoys");
-        // jogadores[1] = new JogadorMinmaxBuscaProfundidade("TheBoys");
+        // jogadores[1] = new JogadorHeuristico("TheBoys");
+        jogadores[1] = new JogadorMinmaxBuscaProfundidade("TheBoys");
         
-        Campeonato campeonato = new Campeonato(jogadores, 50);
+        Campeonato campeonato = new Campeonato(jogadores, 3);
         Participacao[] p = campeonato.runPontosCorridos();
         
         for(int i = 0; i < p.length; i++){

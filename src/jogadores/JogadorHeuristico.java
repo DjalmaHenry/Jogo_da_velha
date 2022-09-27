@@ -102,6 +102,7 @@ public class JogadorHeuristico extends Jogador {
                 }
             }
         }
+
         // check columns
         for (int i = 0; i < tabuleiro.length - 3; i++) {
             for (int j = 0; j < tabuleiro.length; j++) {
@@ -117,6 +118,7 @@ public class JogadorHeuristico extends Jogador {
                 }
             }
         }
+        
         // check diagonals
         for (int i = 0; i < tabuleiro.length - 3; i++) {
             for (int j = 0; j < tabuleiro.length - 3; j++) {
